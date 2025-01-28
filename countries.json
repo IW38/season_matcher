@@ -1,0 +1,6 @@
+{
+    "Winter": ["Canada", "Switzerland", "Norway"],
+    "Spring": ["Japan", "Netherlands", "New Zealand"],
+    "Summer": ["Australia", "Brazil", "Italy"],
+    "Autumn": ["USA", "Germany", "South Korea"]
+}
