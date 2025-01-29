@@ -6,11 +6,11 @@
 
 ## Featured Destinations
 1.Winter Wonders in Europe
-###Explore the best winter destinations in the Alps to cozy Christmas markets in Germany.
+### Explore the best winter destinations in the Alps to cozy Christmas markets in Germany.
 2. Best Summer Beaches
 ### Discover top beach spots to soak up the sun this summer- think white sands and crystal clear waters!
 3. Spring escapes
-###Where to go for cheery blossoms,mild wheatger, and nature hikes!
+### Where to go for cheery blossoms,mild wheatger, and nature hikes!
 
 ## How it works: 
 1. Choose your season (eg: Summer, Fall, Winter, Spring)
