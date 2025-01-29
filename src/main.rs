@@ -1,15 +1,31 @@
 use clap::{Arg, Command};
 use serde::Deserialize;
-use std::collections::HashMap;
 use std::fs;
+use std::fmt;
 
+// Define the Country struct
+#[derive(Deserialize)]
+struct Country {
+    name: String,
+    population: u64,
+    area: f64, // in square kilometers
+}
+
+// Implement the Display trait for the Country struct
+impl fmt::Display for Country {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.name)
+    }
+}
+
+// Define the Countries struct
 #[derive(Deserialize)]
 #[serde(rename_all = "PascalCase")]
 struct Countries {
-    winter: Vec<String>,
-    spring: Vec<String>,
-    summer: Vec<String>,
-    autumn: Vec<String>,
+    winter: Vec<Country>,
+    spring: Vec<Country>,
+    summer: Vec<Country>,
+    autumn: Vec<Country>,
 }
 
 fn main() {
@@ -43,7 +59,8 @@ fn main() {
 
     match season_countries {
         Some(countries_list) => {
-            println!("Countries to visit in {}: {:?}", season, countries_list);
+            let country_names: Vec<String> = countries_list.iter().map(|c| c.to_string()).collect();
+            println!("Countries to visit in {}: {}", season, country_names.join(", "));
         }
         None => {
             println!("Invalid season. Please choose from Winter, Spring, Summer, or Autumn.");
